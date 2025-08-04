@@ -11,10 +11,10 @@ A comprehensive tutorial (in Bangla) exploring Next.js rendering strategies and 
 ```mermaid
 flowchart LR
   A[Request] --> B{Rendering Type}
-  B -->|Static Generation (SSG)| C[Pre‑render at build time]
+  B -->|Static Generation (SSG)| C[Pre-render at build time]
   B -->|Server Side Rendering (SSR)| D[Render per request]
-  B -->|Incremental Static Regeneration (ISR)| E[Pre‑render + revalidate]
-  B -->|Client‑side Rendering (CSR)| F[Render in browser]
+  B -->|Incremental Static Regeneration (ISR)| E[Pre-render + revalidate]
+  B -->|Client-side Rendering (CSR)| F[Render in browser]
 ```
 
 - **SSG**: Fast and cacheable static pages.
@@ -91,7 +91,7 @@ pie
 
 | Use Case       | Best Mode | Notes                          |
 | -------------- | --------- | ------------------------------ |
-| Blog / docs    | SSG / ISR | Fast, static yet updatable    |
+| Blog / docs    | SSG / ISR | Fast, static yet updatable     |
 | User dashboard | SSR       | Per‑request data freshness     |
 | Interactive UI | CSR / SWR | Client data fetching as needed |
 
