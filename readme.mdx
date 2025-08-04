@@ -117,16 +117,15 @@ export async function getStaticProps() {
 
 ## 6. Flow: End‑to‑End Request Handling
 
-```mermaid
 flowchart TD
   User --> Request[/Route/]
   Request --> CDN{Is cached?}
   CDN -->|Yes| Browser[Delivery]
   CDN -->|No| Server[Next.js app]
   Server --> Renderer[getServerSideProps or ISR]
-  Renderer --> CDN CacheStore
+  Renderer --> Cache[CDN CacheStore]
   Server --> Browser
-```
+
 
 - Emphasizes decision flow for SSG, ISR, SSR.
 - CDN first, fallback to server when missing or stale.
